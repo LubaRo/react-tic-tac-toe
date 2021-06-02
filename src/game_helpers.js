@@ -27,7 +27,7 @@ function getStepValueByStepNumber(stepNumber) {
 }
 
 function getHistoryUpToStep(history, stepNumber) {
-  const end = stepNumber ? stepNumber + 1 : undefined;
+  const end = Number.isInteger(stepNumber) ? stepNumber + 1 : undefined;
   return history.slice(0, end);
 }
 
